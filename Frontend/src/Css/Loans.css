@@ -1,0 +1,141 @@
+.create-loans-container {
+  width: 1000px;
+  margin: 20px auto;
+  padding: 10px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.create-loans-container h2 {
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.create-loans-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px;
+}
+
+.form-input {
+  width: 100%;
+}
+
+.file-upload {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.file-upload input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.loan-btn {
+  grid-column: span 2;
+  margin-top: 20px !important;
+  padding: 15px !important ;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  background-color: var(--primary-color) !important;
+  border-radius: 8px !important;
+  color: #fff !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.all-loanlist-container .table-title {
+  margin-bottom: 30px;
+}
+
+.loan-info-title {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #16A34A !important;
+  margin-bottom: 10px !important;
+  text-align: center !important;
+  padding: 0px !important;
+}
+
+.close-img-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.close-img-box img{
+    width: 50%;
+    margin-top: -10px;
+
+}
+
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .create-loans-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .create-loans-form {
+    gap: 20px;
+  }
+}
+
+/* Mobiles (≤600px) */
+@media (max-width: 600px) {
+  .create-loans-container {
+    width: 95%;
+    padding: 15px;
+    margin: 10px auto;
+  }
+
+  .create-loans-container h2 {
+    font-size: 18px;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+
+  .create-loans-form {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .css-1knm6qq{
+    width: 100% !important;
+    overflow-y: scroll;
+  }
+
+  .file-upload {
+    grid-column: span 1;
+  }
+
+  .loan-btn {
+    grid-column: span 1;
+    width: 100%;
+    font-size: 15px !important;
+    padding: 12px !important;
+  }
+
+  .close-img-box {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .close-img-box img {
+    width: 80%;
+  }
+}
+

@@ -1,0 +1,769 @@
+/* ====== Single Loan Page Styles ====== */
+.loan-page {
+  max-width: 1200px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+}
+
+/* ---- Header ---- */
+.loan-page .header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.loan-page .header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.loan-page .header-right button {
+  padding: 4px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.loan-page .loan-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.loan-page .loan-title {
+  margin: 0;
+  font-size: 24px;
+  font-family: var(--logo-font);
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.loan-page .sub-title {
+  margin: -1px 0 4px 0px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.loan-page .status {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 12px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.loan-page .status.active {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.loan-page .status.closed {
+  background: #fee2e2;
+  color: var(--error);
+}
+
+/* ---- Cards Layout ---- */
+.loan-page .loan-info-box {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.loan-page .header .header-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.loan-info-box .loan-details {
+  width: 40%;
+  height: 450px;
+}
+.loan-info-box .Ornaments-image-box {
+  width: 30%;
+  height: 450px;
+  background: #f6f9ff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.add-btn:disabled {
+  cursor: not-allowed !important;
+  opacity: 0.4 !important;
+}
+
+.loan-info-box .Ornaments-image-box img {
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.loan-info-box .Ornaments-image-box h3 {
+  margin-bottom: 20px;
+}
+.loan-info-box .loan-summary {
+  width: 30%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+.loan-page .card {
+  background: #f6f9ff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.loan-page .card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--primary-color);
+}
+
+/* Loan Details Grid */
+.loan-page .info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.loan-page .info-bx h6 {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: var(--logo-font);
+  text-transform: capitalize;
+  color: var(--text);
+  margin-bottom: 1px;
+}
+
+.loan-page .info-bx p {
+  font-size: 14px;
+  color: var(--primary-color);
+  margin: 0;
+  font-weight: 500;
+}
+
+.loan-page .summary-box {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+.loan-page .summary-box h6 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-family: var(--logo-font);
+}
+
+.loan-page .summary-box p {
+  font-size: 30px;
+  color: var(--primary-color);
+  font-weight: 500;
+  text-align: right;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+/* ---- EMI Section ---- */
+.loan-page .emi-history {
+  margin-top: 20px;
+}
+
+.loan-page .emi-history h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.loan-page .emi-add-from {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.loan-page .emi-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.loan-page .form-input-box {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  width: 65%;
+}
+
+.loan-page .add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 15px 16px;
+  background: var(--primary-color);
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 30%;
+}
+
+.loan-page .add-btn:hover {
+  background: var(--success);
+}
+
+/* ---- DataGrid Overrides ---- */
+.loan-page .MuiDataGrid-root {
+  border: none !important;
+  font-family: "Inter", sans-serif !important;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.loan-page .MuiDataGrid-columnHeaders {
+  background: #f1f5f9;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.loan-page .MuiDataGrid-cell {
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.loan-page .MuiTablePagination-root {
+  color: #475569;
+}
+
+/* Print settings: hide sidebar, buttons */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #loan-page,
+  #loan-page * {
+    visibility: visible;
+  }
+  #loan-page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .edit-btn,
+  .loan-summary,
+  .emi-history {
+    display: none !important;
+  }
+}
+
+/* loan-print-page */
+
+/* ---------------- Global Print Settings ---------------- */
+@page {
+  size: A4;
+  margin: 1mm;
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 11px;
+  }
+  .pdf-print {
+    page-break-after: always;
+  }
+}
+
+/* ---------------- Container ---------------- */
+.pdf-print {
+  width: 100%;
+  max-width: 210mm;
+  min-height: 297mm;
+  margin: auto;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+/* ---------------- FRONT SIDE ---------------- */
+.print-front-side {
+  page-break-after: always;
+}
+
+.h-left {
+  width: 100%;
+}
+.h-left h3 {
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+}
+/* Customer Info */
+.pdf-print .customer-info-box {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.pdf-print h2 {
+  font-size: 25px;
+}
+.pdf-print .heading-notice p {
+  font-size: 14px;
+}
+.pdf-print .cus-image-box img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: top center;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+
+.pdf-print .cus-basic-info-box table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+}
+
+.pdf-print .cus-basic-info-box th,
+.cus-basic-info-box td {
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  text-align: left;
+}
+
+/* Loan Info */
+.pdf-print .cus-loan-info-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.important-note {
+  width: 100%;
+  padding: 5px 25px;
+}
+.important-note h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.important-note ol li {
+  font-size: 12px;
+}
+.pdf-print .cus-loan-info-table {
+  flex: 1;
+  overflow-x: auto;
+}
+
+.pdf-print .cus-loan-info-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 8px;
+  table-layout: fixed;
+}
+
+.cus-loan-info-table th,
+.cus-loan-info-table td {
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  word-wrap: break-word;
+}
+
+.pdf-print .ornaments-image-box img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Signature */
+.pdf-print .signature-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+}
+.signature-box p {
+  font-size: 12px;
+}
+
+/* ---------------- CUSTOMER ACKNOWLEDGEMENT ---------------- */
+.pdf-print .cutomer-acc-ment-part {
+  margin-top: 20px;
+}
+
+.pdf-print .cutomer-acc-ment-part h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-decoration: underline;
+}
+
+.pdf-print .cutomer-acc-ment-part table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+  table-layout: fixed;
+}
+
+.pdf-print .cutomer-acc-ment-part th,
+.cutomer-acc-ment-part td {
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  word-wrap: break-word;
+}
+
+/* ---------------- BACK SIDE ---------------- */
+.pdf-print .print-back-side {
+  page-break-before: always;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.pdf-print .content-info-box {
+  padding: 10px;
+}
+
+.pdf-print .content-info-box .title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.pdf-print .content-info-box .subtitle {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.pdf-print .content-info-box .section-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.pdf-print .rules {
+  padding-left: 18px;
+}
+
+.pdf-print .rules li {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+/* ---------------- General Enhancements ---------------- */
+.pdf-print h2,
+h3,
+h4 {
+  color: #222;
+}
+
+.pdf-print p {
+  margin: 2px 0;
+}
+
+.print-front-side .header-left {
+  width: 60% !important;
+}
+
+.print-front-side .header-right {
+  width: 40% !important;
+}
+
+.print-front-side .header-left p {
+  font-size: 13px !important;
+}
+
+.pdf-print .main-info-box {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.pdf-print .loan-info-title-sp {
+  margin-top: 20px;
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  margin-bottom: 10px !important;
+  text-decoration: underline;
+}
+
+.pdf-print .cus-loan-info-box {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.print-back-side {
+  padding-top: 100px;
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.voucher-btn {
+  padding: 6px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 10px;
+  background: var(--primary-color);
+  color: white;
+}
+.monthly-payment-details-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+  table-layout: fixed;
+}
+
+.monthly-payment-details-table .head-table h2 {
+  background: #f1f5f9;
+  font-weight: 600;
+  color: #0f172a;
+  border: none !important;
+  padding: 4px 6px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.monthly-payment-details-table .head-table {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.print-back-side .signature-box h3 {
+  font-size: 12px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: #222;
+  text-decoration: underline;
+}
+.sn-signature {
+  justify-content: flex-end !important;
+}
+.print-back-side .signature-box p {
+  font-size: 14px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: #222;
+}
+
+/* ====== ✅ Responsive Design ====== */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .loan-page {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .loan-page .loan-title {
+    font-size: 20px;
+  }
+
+  .loan-page .loan-info-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .loan-info-box .loan-details,
+  .loan-info-box .Ornaments-image-box,
+  .loan-info-box .loan-summary {
+    width: 100%;
+    height: auto;
+  }
+
+  .loan-page .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .loan-page .form-input-box {
+    width: 100%;
+  }
+
+  .loan-page .add-btn {
+    width: 100%;
+  }
+}
+
+/* Mobiles (≤600px) */
+@media (max-width: 600px) {
+  .loan-page {
+    padding: 10px;
+    margin: 10px auto;
+    box-shadow: none;
+    border-radius: 8px;
+  }
+
+  .loan-page .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .loan-page .header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .loan-page .header .header-right {
+    gap: 10px;
+  }
+  .loan-page .header-right button {
+    font-size: 10px;
+    padding: 5px;
+  }
+
+  .loan-page .loan-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .loan-page .loan-title {
+    font-size: 18px;
+  }
+
+  .loan-page .sub-title {
+    font-size: 13px;
+  }
+
+  .loan-page .loan-info-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .loan-info-box .loan-details,
+  .loan-info-box .Ornaments-image-box,
+  .loan-info-box .loan-summary {
+    width: 100%;
+    height: auto;
+  }
+
+  .loan-page .info-grid {
+    grid-template-columns: 3fr;
+    gap: 15px;
+  }
+
+  .loan-page .add-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .loan-page .summary-box {
+    height: auto;
+    padding: 12px;
+  }
+
+  .loan-page .summary-box p {
+    font-size: 22px;
+  }
+
+  .loan-page .emi-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .loan-page .form-input-box {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .loan-page .MuiDataGrid-root {
+    font-size: 12px;
+  }
+
+  .voucher-btn {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+}
+
+/* Small Mobiles (≤400px) */
+@media (max-width: 400px) {
+  .loan-page .loan-title {
+    font-size: 16px;
+  }
+
+  .loan-page .info-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .loan-page .add-btn {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .loan-page .summary-box p {
+    font-size: 18px;
+  }
+}

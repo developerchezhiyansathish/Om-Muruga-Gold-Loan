@@ -1,0 +1,69 @@
+/* Calendar Container */
+.calendar-wrapper {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* FullCalendar overrides */
+.fc .fc-toolbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.fc .fc-button {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.fc .fc-button:hover {
+  background: #357ab8;
+}
+
+.fc .fc-daygrid-day-number {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  padding: 6px;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background: #eaf6ff;
+  border: 2px solid #4a90e2 !important;
+}
+
+.fc .fc-event {
+  border: none;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fc .fc-event:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* Day grid */
+.fc .fc-daygrid-day-frame {
+  padding: 6px;
+}

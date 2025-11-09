@@ -1,0 +1,169 @@
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-light);
+  padding: 2px 0px;
+  border-bottom: 1px solid var(--primary-soft);
+  font-family: var(--logo-font);
+}
+
+.title-box h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0;
+  font-family: var(--logo-font);
+}
+
+.login-status {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.date-box p,
+.time-box p {
+  font-size: 12px;
+  color: var(--text);
+  margin: 0;
+  font-weight: 400;
+}
+
+.login-id {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.login-id:hover {
+  background: var(--primary-soft);
+  transform: translateY(-2px);
+  box-shadow: 0px 3px 6px rgba(180, 197, 247, 0.068);
+  border-radius: 10px;
+}
+
+.login-id p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.active-green-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--success);
+  border-radius: 50%;
+  margin-left: 4px;
+}
+
+/* ---------- RESPONSIVE STYLES ---------- */
+
+/* Large Screens (≥1200px) */
+@media (min-width: 1200px) {
+  .title-box h2 {
+    font-size: 32px;
+  }
+  .login-id p {
+    font-size: 15px;
+  }
+}
+
+/* Tablets (768px - 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .title-box h2 {
+    font-size: 26px;
+  }
+  .login-status {
+    gap: 15px;
+  }
+  .login-id p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Landscape (481px - 767px) */
+@media (max-width: 767px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+    gap: 10px;
+  }
+  .title-box h2 {
+    font-size: 22px;
+  }
+  .login-status {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .date-box p,
+  .time-box p {
+    font-size: 11px;
+  }
+  .login-id p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Portrait (≤480px) */
+@media (max-width: 480px) {
+  .header-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .title-box h2 {
+    font-size: 18px;
+  }
+  .title-box {
+    width: 50%;
+  }
+  .login-status {
+    width: 50%;
+  }
+
+  .login-status {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+  }
+  .date-box {
+    display: none;
+  }
+  .time-box {
+    display: none;
+  }
+
+  .date-box p,
+  .time-box p {
+    font-size: 10px;
+  }
+
+  .login-id {
+    padding: 4px 10px;
+  }
+
+  .login-id p {
+    font-size: 12px;
+  }
+
+  .active-green-dot {
+    width: 6px;
+    height: 6px;
+  }
+}
