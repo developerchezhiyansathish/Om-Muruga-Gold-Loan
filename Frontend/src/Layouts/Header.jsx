@@ -19,7 +19,7 @@ const Header = ({title}) => {
             <p>{time.toLocaleTimeString()}</p>
           </div>
           <div className="login-id">
-            <Avatar alt="Ramanan" src="/public/images/ramanan.png" />
+            <Avatar alt="Ramanan" src="/images/ramanan.png" />
             <p>
               Ramanan<span className="active-green-dot"></span>
             </p>

@@ -17,9 +17,11 @@ import AdminRoutes from "./Routes/AdminRouters.js";
 //Use Routes
 app.use("/api/", AdminRoutes);
 
+//Database Connection
+connectDB();
+
 app.listen(port, () => {
   console.log(`Server Running at Port ${port}`);
-  connectDB();
 });
 
 app.get("/", (req, res) => {
