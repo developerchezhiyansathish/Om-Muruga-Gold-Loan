@@ -2,28 +2,35 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./Database/Database.js";
+import AdminRoutes from "./Routes/AdminRouters.js";
 
-//Configure
-const app = express();
+// Environment variables
 dotenv.config();
-app.use(cors());
+
+// Initialize app
+const app = express();
 app.use(express.json());
 
-//PORT CONTROL
-const port = process.env.PORT || 3000;
+// CORS
+app.use(
+  cors({
+    origin: ["https://www.ommurugagoldloan.in", "http://localhost:5173"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
-//Routes
-import AdminRoutes from "./Routes/AdminRouters.js";
-//Use Routes
-app.use("/api/", AdminRoutes);
-
-//Database Connection
+// MongoDB
 connectDB();
 
-app.listen(port, () => {
-  console.log(`Server Running at Port ${port}`);
+// Routes
+app.use("/api", AdminRoutes);
+
+// Default route
+app.get("/", (req, res) => {
+  res.send("Om Muruga Gold Loan Backend is Running...");
 });
 
-app.get("/", (req, res) => {
-  res.send("Backend is running...");
-});
+// Port control
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Server running on port ${port}`));

@@ -1,17 +1,27 @@
 import mongoose from "mongoose";
 
+let isConnected = false;
+
 const connectDB = async () => {
+  if (isConnected) {
+    //Use existing database connection
+    console.log("Using existing MongoDB connection");
+    return;
+  }
+
   try {
-    await mongoose.connect(process.env.DB, {
+    const conn = await mongoose.connect(process.env.DB, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      serverSelectionTimeoutMS: 10000,
+      serverSelectionTimeoutMS: 5000,
+      maxPoolSize: 10, 
     });
-    console.log("✅ MongoDB Connected Successfully");
+
+    isConnected = conn.connections[0].readyState;
+    console.log("MongoDB Connected Successfully");
   } catch (error) {
-    console.log("❌ MongoDB Connection Failed:", error.message);
+    console.error("MongoDB Connection Failed:", error.message);
   }
-  console.log("");
 };
 
 export default connectDB;
